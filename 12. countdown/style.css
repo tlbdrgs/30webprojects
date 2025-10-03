@@ -1,0 +1,103 @@
+body {
+    background: #181c23;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+.countdown-wrapper h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.countdown {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: #23272f;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    width: 100px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    perspective: 600px;
+}
+
+.card .label {
+    color: #8fa1b3;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.flip {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+    color: #fff;
+    background: #181c23;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.flip.animate {
+    animation: flip 0.7s cubic-bezier(.4,2,.6,.8);
+}
+
+.reset {
+    background: #23272f;
+    color: #fff;
+    border: 2px solid #8fa1b3;
+    padding: 12px 24px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+
+.reset:hover {
+    background: #8fa1b3;
+    border-color: #8fa1b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(143, 161, 179, 0.3);
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg);
+    }
+    40% {
+        transform: rotateX(-90deg);
+    }
+    60% {
+        transform: rotateX(-90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
