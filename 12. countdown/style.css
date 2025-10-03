@@ -21,6 +21,26 @@ body {
     letter-spacing: 2px;
 }
 
+.explosion-message {
+    color: #ff4757 !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 20px rgba(255, 71, 87, 0.8), 0 0 40px rgba(255, 71, 87, 0.6);
+    animation: explosion 2s ease-in-out infinite;
+    margin-bottom: 3rem !important;
+}
+
+@keyframes explosion {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 20px rgba(255, 71, 87, 0.8), 0 0 40px rgba(255, 71, 87, 0.6);
+    }
+    50% {
+        transform: scale(1.1);
+        text-shadow: 0 0 30px rgba(255, 71, 87, 1), 0 0 60px rgba(255, 71, 87, 0.8), 0 0 80px rgba(255, 71, 87, 0.6);
+    }
+}
+
 .countdown {
     display: flex;
     gap: 2rem;
